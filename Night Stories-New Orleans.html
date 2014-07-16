@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+<head>	
+	<meta charset="UTF-8">
+	<title>Night Stories</title>
+	<script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+	<link rel = "stylesheet"
+		  type = "text/css"
+		  href = "nightStories.css"/>
+	<!-- set default resolution settings -->
+	<meta name="viewport" content="width=1920px,initial-scale=1,maximum-scale=1,user-scalable=no"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+</head>
+<body background="openphoto.jpg" >
+	<p>
+		<!-- main theme sound -->
+		<audio id="rain" hidden = "hidden"  autoplay = "autoplay" loop = "loop"> 
+			<source src = "rain.ogg"
+					type = "audio/ogg"/>
+			<source src = "rain.mp3"
+					type = "audio/mp3"/>
+		</audio>
+		<!-- starting screen buttons -->
+		<div class="wrappermain">
+			<button class="play" type="button" onclick="location.href='character sheet.html'">PLAY</button>
+			<a role="button" class="continue" onclick="location.href='continue.html'" disabled="disabled">CONTINUE</a>
+		</div>
+	</p>
+	<p>
+	<div class="wrapper2">
+		<button onclick="document.getElementById('rain').muted=!document.getElementById('rain').muted" class="sound" type="button">sm</button>
+		<button class="help" type="button">hp</button>
+		<a role="button" class="about" onclick="location.href='#openModal'">ab</a>
+			<!-- creation of the pop up window about -->
+			<div id="openModal" class="modalDialog">
+				<div>
+					<!-- close button -->
+					<a onclick="location.href='#close'" title="Close" class="close">x</a>
+					<p>
+					bla bla bla
+					</p>
+				</div>
+			</div>
+		<a role="button" class="exit" onclick="location.href='https://www.google.gr/'"><img src="door.jpg" align="center" width="100%"></a>
+	</div>	
+	</p>
+</body>
+</html>
